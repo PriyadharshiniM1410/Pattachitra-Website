@@ -12,6 +12,41 @@
 
 <link rel="stylesheet" href="css/style.css">
 
+<style>
+.hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+</style>
+
 </head>
 
 <body>
@@ -19,19 +54,17 @@
 <!-- NAVBAR -->
 
 <header class="navbar">
-
 <div class="logo">PATTACHITRA</div>
 
 <nav>
 <ul>
 <li><a href="index.html" class="active">Home</a></li>
-<li><a href="about.html" >About</a></li>
-<li><a href="gallery.html" >Gallery</a></li>
-<li><a href="shop.html" >Shop</a></li>
-<li><a href="contact.html" >Contact</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="contact.html">Contact</a></li>
 </ul>
 </nav>
-
 </header>
 
 
@@ -39,12 +72,21 @@
 
 <section class="hero">
 
+<div class="slider" id="slider">
+
+<div class="slide"><img src="images/1.jpg"></div>
+<div class="slide"><img src="images/2.jpg"></div>
+<div class="slide"><img src="images/3.jpg"></div>
+<div class="slide"><img src="images/4.jpg"></div>
+
+<!-- CLONE FIRST IMAGE -->
+<div class="slide"><img src="images/1.jpg"></div>
+
+</div>
+
 <div class="hero-text">
-
 <h1>PATTACHITRA</h1>
-
 <p>Ancient art of Odisha — where myths breathe through colour</p>
-
 </div>
 
 </section>
@@ -53,7 +95,6 @@
 <!-- ARTIST SECTION -->
 
 <section class="artist">
-
 <div class="artist-text">
 
 <h2>The Art & The Artist</h2>
@@ -71,7 +112,6 @@ As a practitioner of this sacred art, I dedicate each brushstroke to preserving 
 <div class="artist-img">
 <img src="images/2.jpg">
 </div>
-
 </section>
 
 
@@ -84,33 +124,21 @@ As a practitioner of this sacred art, I dedicate each brushstroke to preserving 
 <div class="work-grid">
 
 <div class="card">
-
 <img src="images/3.jpg">
-
 <h3>Radha Krishna</h3>
-
 <p>Love in the groves of Vrindavan</p>
-
 </div>
 
 <div class="card">
-
 <img src="images/4.jpg">
-
 <h3>Jagannath Temple</h3>
-
 <p>The sacred abode at Puri</p>
-
 </div>
 
 <div class="card">
-
 <img src="images/5.jpg">
-
 <h3>Dashavatara</h3>
-
 <p>Ten divine incarnations</p>
-
 </div>
 
 </div>
@@ -121,17 +149,37 @@ As a practitioner of this sacred art, I dedicate each brushstroke to preserving 
 <!-- FOOTER -->
 
 <footer class="footer">
-
 <h3>PATTACHITRA ART • ODISHA</h3>
 <br>
-
 <p>Preserving the ancient art of storytelling through colours and brushstrokes.</p>
-
 <p class="copy">© 2026 All rights reserved</p>
-
 </footer>
 
 
-</body>
+<!-- SMOOTH LOOP SCRIPT -->
+<script>
+let slider = document.getElementById("slider");
+let index = 0;
+let totalSlides = slider.children.length;
 
+setInterval(() => {
+    index++;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+
+    if (index === totalSlides - 1) {
+        setTimeout(() => {
+            slider.style.transition = "none";
+            index = 0;
+            slider.style.transform = "translateX(0)";
+        }, 1000);
+
+        setTimeout(() => {
+            slider.style.transition = "transform 1s ease-in-out";
+        }, 1100);
+    }
+
+}, 5000); // change every 3 sec (smooth)
+</script>
+
+</body>
 </html>
