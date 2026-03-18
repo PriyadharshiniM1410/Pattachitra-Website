@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shop – Pattachitra</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="logo">PATTACHITRA</div>
+
+<nav>
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="shop.html" class="active">Shop</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+</nav>
+
+</header>
+
+
+
+<!-- SHOP TITLE -->
+
+<section class="shop-header">
+
+<h1>SHOP</h1>
+
+<p>Each piece is hand-painted and one-of-a-kind. Inquire to commission or purchase.</p>
+
+</section>
+
+
+
+<!-- SHOP ITEMS -->
+
+<section class="shop-container">
+
+
+
+<div class="card">
+
+<img src="images/5.jpg">
+
+<div class="card-content">
+
+<h3>Tree Of Life</h3>
+
+<p class="size">18×14 inches</p>
+
+<p class="price">₹6,500</p>
+
+<button onclick="sendInquiry('Tree Of Life')">Inquire</button>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="images/4.jpg">
+
+<div class="card-content">
+
+<h3>Ganesha Blessing</h3>
+
+<p class="size">12×12 inches</p>
+
+<p class="price">₹4,500</p>
+
+<button onclick="sendInquiry('Ganesha Blessing')">Inquire</button>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="images/3.jpg">
+
+<div class="card-content">
+
+<h3>Krishna Leela Triptych</h3>
+
+<p class="size">48×18 inches</p>
+
+<p class="price">₹25,000</p>
+
+<button onclick="sendInquiry('Krishna Leela Triptych')">Inquire</button>
+
+</div>
+
+</div>
+
+
+
+</section>
+
+
+
+<!-- POPUP MESSAGE -->
+
+<div id="popup" class="popup">
+
+<h3>Inquiry Sent!</h3>
+
+<p>
+We've noted your interest in "<span id="artName"></span>".
+We'll reach out soon with details.
+</p>
+
+</div>
+
+
+
+<!-- COMMISSION SECTION -->
+
+<section class="commission">
+
+<h2>COMMISSION A CUSTOM PIECE</h2>
+
+<p>
+Want a personalised Pattachitra painting? I accept commissions for custom themes, sizes, and stories.
+Reach out through the contact page to discuss your vision.
+</p>
+
+<a href="contact.html" class="contact-btn">Get in Touch</a>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<h3>PATTACHITRA ART • ODISHA</h3>
+<br>
+
+<p>Preserving the ancient art of storytelling through colours and brushstrokes.</p>
+
+<p class="copy">© 2026 All rights reserved</p>
+
+</footer>
+
+
+
+
+<script>
+
+function sendInquiry(name){
+
+document.getElementById("artName").innerText = name;
+
+var popup = document.getElementById("popup");
+
+popup.style.display = "block";
+
+setTimeout(function(){
+
+popup.style.display = "none";
+
+},4000);
+
+}
+
+</script>
+
+
+</body>
+</html>
