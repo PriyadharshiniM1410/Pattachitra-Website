@@ -24,62 +24,29 @@ The main goal of this project is to create a simple and elegant website that sho
 ## Pages in the Website
 
 ### Home Page
-
 Provides an introduction to Pattachitra art and the purpose of the website.
 
 ### About Page
-
 Explains the history, origin, and cultural significance of Pattachitra paintings.
 
 ### Gallery Page
-
 Displays a collection of paintings in a grid layout with filter options.
 
 ### Shop Page
-
 Shows selected artworks with details like size and price. Users can click the **Inquire** button to express interest in a painting.
 
 ### Contact Page
-
 Allows users to contact the artist through email, phone, or a contact form.
 
 ---
 
 ## Technologies Used
 
-* **HTML5** – Used to create the structure of the website
-* **CSS3** – Used for styling, layout, and visual design
-* **JavaScript** – Used for interactive features like gallery filtering and popup messages
-* **Google Fonts** – Used for typography (*Playfair Display* and *Inter*)
+* **HTML5**
+* **CSS3**
+* **JavaScript**
+* **Google Fonts**
 
 ---
 
 ## Project Structure
-
-```
-pattachitra-website/
-│
-├── index.html
-├── about.html
-├── gallery.html
-├── shop.html
-├── contact.html
-│
-├── css/
-│   └── style.css
-│
-├── images/
-│   └── artwork images
-│
-└── README.md
-```
-
----
-
-## Conclusion
-
-This project demonstrates how a traditional Indian art form like **Pattachitra** can be presented through a modern website. The website helps users explore the paintings, learn about the art form, and contact the artist for purchases or custom commissions.
-
----
-
-
